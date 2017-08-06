@@ -234,6 +234,9 @@ public protocol IChartDataSet
     /// - note: For bar and line charts: if `maxVisibleCount` is reached, no values will be drawn even if this is enabled.
     var drawValuesEnabled: Bool { get set }
     
+    // Custom array for inverted values
+    var invertedIndexes: [Int]? { get set }
+    
     /// - returns: `true` if y-value drawing is enabled, `false` ifnot
     var isDrawValuesEnabled: Bool { get }
     
@@ -258,3 +261,4 @@ public protocol IChartDataSet
     /// - returns: `true` if this DataSet is visible inside the chart, or `false` ifit is currently hidden.
     var isVisible: Bool { get }
 }
+
